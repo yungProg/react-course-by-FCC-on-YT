@@ -11,10 +11,10 @@ function customRender(reactElement, container) {
 const myElement = {
     type: "a",
     props: {
-        href: "https://jw.org",
+        href: "https://google.com",
         target: "blank"
     },
-    children: "Click to visit Jehovah's Witness official website"
+    children: "visit Google"
 }
 
 const mainCOntainer = document.getElementById("root")
