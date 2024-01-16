@@ -23,7 +23,7 @@ function App() {
   useEffect(
     () => {
       generatePassword()
-    }, [length, numbersAllowed, symbolsAllowed]
+    }, [generatePassword, length, numbersAllowed, symbolsAllowed]
   )
 
   const passwordRef = useRef(null)
