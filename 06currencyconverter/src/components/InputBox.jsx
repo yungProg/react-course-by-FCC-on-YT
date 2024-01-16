@@ -1,3 +1,4 @@
+import { useId } from "react"
 import PropTypes from "prop-types"
 
 function InputBox({
@@ -11,12 +12,15 @@ function InputBox({
     currencyDisabled = false
 }) {
 
+    const id = useId()
+
 
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex`}>
         <div className='w-1-2'>
-            <label className='text-black/40 mb-2 inline-block' htmlFor="">{label}</label>
+            <label className='text-black/40 mb-2 inline-block' htmlFor={id}>{label}</label>
             <input 
+            id={id}
             className='outline-none w-full bg-transparent py1.5'
             type='number' 
             placeholder='Amount' 
