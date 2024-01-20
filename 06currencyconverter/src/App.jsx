@@ -42,7 +42,7 @@ function App() {
             <div className='w-full mb-1'>
             <InputBox 
             label={"From"}
-            amount={cash.toFixed(2)}
+            amount={cash}
             onAmountChange={(amount) => setCash(amount)}
             selectedCurrency={from}
             currencyOptions={options}
@@ -60,7 +60,7 @@ function App() {
             <div className='w-full mb-1'>
             <InputBox 
             label={"To"}
-            amount={convertedAmount.toFixed(2)}
+            amount={convertedAmount && convertedAmount.toFixed(2)}
             selectedCurrency={to}
             currencyOptions={options}
             onSelectedCurrencyChnage={(to) => setTo(to)}

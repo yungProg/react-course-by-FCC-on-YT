@@ -1,0 +1,50 @@
+import { Link } from "react-router-dom"
+
+function Contact() {
+  return (
+    <main className="p-7 mx-auto">
+      <div>
+        <h2 className="font-extrabold text-3xl mb-5">Contact</h2>
+        <p className="mb-3">Looking to hearing from you</p>
+      </div>
+      <div className="mb-2">
+        <p className="font-bold text-1xl">Phone</p>
+        <Link to={"tel:+233243230749"} aria-label="0243230749">+233-24-323-0749</Link>
+      </div>
+      <div className="mb-2">
+        <p className="font-bold text-1xl">Email</p>
+        <Link to={"mailto:gboakye007@outlook.com"}>gboakye007@outlook.com</Link>
+      </div>
+
+      <div className="max-w-full">
+        <form action="">
+          <div  className="flex flex-wrap max-w-3xl">
+            <div className="basis-80 shrink-1 grow-0 mb-2 mr-2">
+              <label className="block mb-0.5" htmlFor="first-name">First Name</label>
+              <input className="w-full outline-none" type="text" name="first-name" id="first-name" />
+            </div>
+            <div className="basis-80 shrink-1 grow-0 mb-2 mr-2">
+              <label className="block mb-0.5" htmlFor="last-name">Last Name</label>
+              <input className="w-full outline-none" type="text" name="last-name" id="last-name" />
+            </div>
+            <div className="basis-80 shrink-1 grow-0 mb-2 mr-2">
+              <label className="block mb-0.5" htmlFor="email">Email</label>
+              <input className="w-full outline-none" type="email" name="email" id="email" />
+            </div>
+            <div className="basis-80 shrink-1 grow-0 mb-2 mr-2">
+              <label className="block mb-0.5" htmlFor="subject">Subject</label>
+              <input className="w-full outline-none" type="text" name="subject" id="subject" />
+            </div>
+            <div className="basis-80 shrink-1 grow-0 mb-2 mr-2">
+              <label className="block mb-0.5" htmlFor="description">Description</label>
+              <textarea className="w-full min-h-20 outline-none" name="description" id="description"></textarea>
+            </div>
+          </div>
+          <button className="hover:animate-bounce cursor-pointer block text-xl font-bold py-8 px-3 bg-yellow-600 rounded-full" type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+  )
+}
+
+export default Contact
