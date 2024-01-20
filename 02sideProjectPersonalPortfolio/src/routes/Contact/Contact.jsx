@@ -2,18 +2,20 @@ import { Link } from "react-router-dom"
 
 function Contact() {
   return (
-    <main className="p-7 mx-auto">
+    <main className="p-7 mx-auto md:flex justify-around md:mb-40 md:mt-28">
       <div>
-        <h2 className="font-extrabold text-3xl mb-5">Contact</h2>
-        <p className="mb-3">Looking to hearing from you</p>
-      </div>
-      <div className="mb-2">
-        <p className="font-bold text-1xl">Phone</p>
-        <Link to={"tel:+233243230749"} aria-label="0243230749">+233-24-323-0749</Link>
-      </div>
-      <div className="mb-2">
-        <p className="font-bold text-1xl">Email</p>
-        <Link to={"mailto:gboakye007@outlook.com"}>gboakye007@outlook.com</Link>
+        <div>
+          <h2 className="font-extrabold text-3xl mb-5">Contact</h2>
+          <p className="mb-3">Looking to hearing from you</p>
+        </div>
+        <div className="mb-2">
+          <p className="font-bold text-1xl">Phone</p>
+          <Link to={"tel:+233243230749"} aria-label="0243230749">+233-24-323-0749</Link>
+        </div>
+        <div className="mb-2">
+          <p className="font-bold text-1xl">Email</p>
+          <Link to={"mailto:gboakye007@outlook.com"}>gboakye007@outlook.com</Link>
+        </div>
       </div>
 
       <div className="max-w-full">
@@ -39,8 +41,9 @@ function Contact() {
               <label className="block mb-0.5" htmlFor="description">Description</label>
               <textarea className="w-full min-h-20 outline-none" name="description" id="description"></textarea>
             </div>
+          
+          <button className="hover:text-white/95 cursor-pointer my-auto h-20 w-20 aspect-square text-xl font-bold  bg-yellow-600 rounded-full" type="submit">Submit</button>
           </div>
-          <button className="hover:animate-bounce cursor-pointer block text-xl font-bold py-8 px-3 bg-yellow-600 rounded-full" type="submit">Submit</button>
         </form>
       </div>
     </main>
